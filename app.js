@@ -28,6 +28,10 @@ app.get("/business", (req, res) => {
   res.render("business");
 });
 
+app.get("/resources", (req, res) => {
+  res.render("resources");
+});
+
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
 });
