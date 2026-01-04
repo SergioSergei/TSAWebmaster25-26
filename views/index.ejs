@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>City of Miami</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <%- include("partials/header") %>
+
+  <main class="page">
+
+    <!-- HERO -->
+    <header class="hero">
+      <img class="hero__img" src="/images/hero-miami.jpg" alt="Miami skyline">
+      <div class="hero__overlay">
+        <h1 class="hero__title">WELCOME TO THE CITY OF MIAMI</h1>
+
+        <form class="hero__search" action="/search" method="GET">
+          <span class="hero__searchIcon" aria-hidden="true">🔍</span>
+          <input
+            name="q"
+            class="hero__input"
+            type="search"
+            placeholder="Search..."
+            aria-label="Search"
+          />
+        </form>
+      </div>
+    </header>
+
+    <!-- HIGHLIGHT CAROUSEL -->
+    <section class="highlightWrap">
+      <button class="circleArrow circleArrow--left" type="button" aria-label="Previous" data-highlight-prev>
+        <span>‹</span>
+      </button>
+
+      <div class="highlight" aria-live="polite">
+        <!-- Slide 1 -->
+        <article class="highlight__slide is-active" data-highlight-slide>
+          <div class="highlight__card">
+            <div class="highlight__left">
+              <img src="/images/highlight-1.jpg" alt="Highlight image">
+            </div>
+
+            <div class="highlight__right">
+              <div class="highlight__kicker">HIGHLIGHT: THRIVING</div>
+              <div class="highlight__title">MIND SOUTH FLORIDA</div>
+              <div class="highlight__desc">
+                Connects Miami–Dade residents to accessible mental health services,
+                including counseling, crisis support, and education.
+              </div>
+
+              <a class="pillBtn" href="/highlight/thriving-mind">
+                LEARN MORE <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 2 -->
+        <article class="highlight__slide" data-highlight-slide>
+          <div class="highlight__card">
+            <div class="highlight__left">
+              <img src="/images/highlight-2.jpg" alt="Highlight image">
+            </div>
+
+            <div class="highlight__right">
+              <div class="highlight__kicker">HIGHLIGHT: CITY</div>
+              <div class="highlight__title">SERVICES DIRECTORY</div>
+              <div class="highlight__desc">
+                Explore resident services, permits, and community programs in one place.
+              </div>
+
+              <a class="pillBtn" href="/highlight/services">
+                LEARN MORE <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <button class="circleArrow circleArrow--right" type="button" aria-label="Next" data-highlight-next>
+        <span>›</span>
+      </button>
+    </section>
+
+    <!-- LOOKING FOR -->
+    <section class="looking">
+      <div class="looking__title">YOU MAY BE LOOKING FOR…</div>
+
+      <div class="cards">
+        <a class="card" href="/services">
+          <div class="card__img">
+            <img src="/images/card-1.jpg" alt="">
+          </div>
+          <div class="card__body">
+            <div class="card__h">City services</div>
+            <div class="card__p">Find local resources and support.</div>
+          </div>
+        </a>
+
+        <a class="card card--active" href="/story">
+          <div class="card__img">
+            <img src="/images/card-2.jpg" alt="">
+            <div class="card__badge">WC</div>
+          </div>
+          <div class="card__body">
+            <div class="card__h">Our story</div>
+            <div class="card__p">Learn what makes Miami unique.</div>
+          </div>
+          <div class="card__dot" aria-hidden="true">›</div>
+        </a>
+
+        <a class="card" href="/help">
+          <div class="card__img">
+            <img src="/images/card-3.jpg" alt="">
+          </div>
+          <div class="card__body">
+            <div class="card__h">Any questions?</div>
+            <div class="card__p">Get help and reach out.</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- DIVERSITY / INFOGRAPHIC SECTION -->
+    <section class="diversity">
+      <!-- teal squiggle path (SVG) -->
+      <svg class="diversity__path" viewBox="0 0 420 900" preserveAspectRatio="none" aria-hidden="true">
+        <path
+          d="M320,10
+             C 260,90 390,140 320,220
+             C 250,300 80,270 120,380
+             C 160,500 360,470 310,600
+             C 250,760 50,720 120,860"
+          fill="none"
+          stroke="rgba(111, 182, 187, 0.95)"
+          stroke-width="26"
+          stroke-linecap="round"
+        />
+      </svg>
+
+      <div class="diversity__grid">
+        <div class="diversity__stats">
+          <div class="statRow">
+            <div class="statBig">70%</div>
+            <div class="statText">Residents speak<br/>a language other<br/>than English at home</div>
+          </div>
+
+          <div class="statRow statRow--center">
+            <div class="statMid">40</div>
+            <div class="statSmall">+442,000</div>
+            <div class="peopleLine" aria-hidden="true">
+              <% for (let i = 0; i < 18; i++) { %>
+                <span class="person"></span>
+              <% } %>
+            </div>
+          </div>
+
+          <div class="statRow statRow--right">
+            <div class="statPair">
+              <div class="statMid">77°F</div>
+              <div class="statLabel">Average annual<br/>temperature</div>
+            </div>
+            <div class="statPair">
+              <div class="statMid">~$49,000</div>
+              <div class="statLabel">Average<br/>household income</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="diversity__art">
+          <!-- Replace with your big illustration image (hands + people) -->
+          <img src="/images/diversity-illustration.png" alt="Diversity illustration">
+        </div>
+      </div>
+
+      <!-- big teal circle with text -->
+      <div class="diversity__badge">
+        <div class="badgeText">
+          …AND THESE MAKE ONE<br/>
+          OF THE MOST DIVERSE<br/>
+          CITIES IN THE U.S!
+        </div>
+      </div>
+
+      <!-- Speech bubbles -->
+      <div class="bubble bubble--left">Merhaba</div>
+      <div class="bubble bubble--right">Hola!</div>
+      <div class="bubble bubble--bottom">مرحبا</div>
+
+    </section>
+
+  </main>
+  <!-- FOOTER -->
+  <%- include("partials/footer") %>
+
+  <script src="/js/home.js"></script>
+  </body>
+</html>
+

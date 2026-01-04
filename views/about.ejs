@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – City of Miami</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  <link rel="stylesheet" href="/css/about.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <%- include("partials/header") %>
+
+  <main class="about-page">
+
+    <!-- HERO -->
+    <section class="about-hero">
+      <img
+        src="/images/about-hero.png"
+        alt="Child in wheelchair"
+        class="about-hero-img"
+      />
+
+      <h1 class="about-title">ABOUT US</h1>
+    </section>
+
+    <!-- CONTENT CARD -->
+    <section class="about-card">
+      <div class="about-card-inner">
+
+        <div class="about-text">
+          <h2>OUR RATIONAL</h2>
+          <p>
+            The Bureau of Animal Care &amp; Control serves the residents of the City of
+            Pittsburgh by providing care, control and resolution to situations dealing
+            with domestic animals and wildlife. The Bureau of Animal Care &amp; Control
+            services are delivered to the City of Pittsburgh by providing care, control
+            and resolution to situations dealing with domestic animals and wildlife.
+          </p>
+
+          <h3>The Plan</h3>
+          <ul>
+            <li>Step 1: The Bureau of Animal Care &amp; Control serves</li>
+            <li>Step 2: The Bureau of Animal Care &amp; Control serves</li>
+            <li>Step 3: The Bureau of Animal Care &amp; Control serves</li>
+            <li>Step 4: The Bureau of Animal Care &amp; Control serves</li>
+          </ul>
+        </div>
+
+        <div class="about-image">
+          <img
+            src="/images/about-side.jpg"
+            alt="Family with wheelchair"
+          />
+        </div>
+
+      </div>
+
+      <p class="about-quote">
+        “We make everyone who has difficulty in Miami feel included”
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <%- include("partials/footer") %>
+
+</body>
+</html>

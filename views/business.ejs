@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Business & Development – City of Miami</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/business.css">
+</head>
+<body>
+
+<%- include("partials/header") %>
+
+<main class="business-page">
+
+  <!-- HERO -->
+  <section class="business-hero">
+    <h1>BUSINESS &amp; DEVELOPMENT</h1>
+    <p>Resources, permits, and opportunities to grow in Miami</p>
+  </section>
+
+  <section class="business-layout">
+
+    <!-- FILTERS -->
+    <aside class="filters">
+      <h3>FILTERS</h3>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="startup">Start a Business</button>
+      <button class="filter-btn" data-filter="permits">Permits & Licensing</button>
+      <button class="filter-btn" data-filter="zoning">Zoning & Land Use</button>
+      <button class="filter-btn" data-filter="incentives">Incentives</button>
+      <button class="filter-btn" data-filter="construction">Construction</button>
+    </aside>
+
+    <!-- CONTENT -->
+    <section class="business-grid">
+
+      <!-- CARD -->
+      <article class="business-card" data-category="startup">
+        <h4>START A BUSINESS IN MIAMI</h4>
+        <p>
+          Miami offers a supportive ecosystem for entrepreneurs, startups, and small
+          businesses. From registration to local compliance, the city provides
+          step-by-step guidance to help you launch successfully.
+        </p>
+
+        <button class="read-more">READ MORE</button>
+
+        <div class="card-more">
+          <ul>
+            <li>Register your business with the State of Florida</li>
+            <li>Obtain a local business tax receipt</li>
+            <li>Confirm zoning compliance for your location</li>
+            <li>Apply for industry-specific permits if required</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="business-card" data-category="permits">
+        <h4>PERMITS &amp; LICENSING</h4>
+        <p>
+          Most commercial activities require permits or licenses to ensure public
+          safety and regulatory compliance.
+        </p>
+
+        <button class="read-more">READ MORE</button>
+
+        <div class="card-more">
+          <ul>
+            <li>Business Tax Receipt (BTR)</li>
+            <li>Health & safety inspections</li>
+            <li>Alcohol and food service permits</li>
+            <li>Temporary event permits</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="business-card" data-category="zoning">
+        <h4>ZONING &amp; LAND USE</h4>
+        <p>
+          Zoning regulations determine how land and buildings can be used throughout
+          the city.
+        </p>
+
+        <button class="read-more">READ MORE</button>
+
+        <div class="card-more">
+          <p>
+            Zoning approval is required before opening, expanding, or redeveloping a
+            property. Developers must comply with land use, density, and environmental
+            regulations.
+          </p>
+        </div>
+      </article>
+
+      <article class="business-card" data-category="incentives">
+        <h4>ECONOMIC INCENTIVES</h4>
+        <p>
+          The City of Miami offers financial incentives to encourage business growth
+          and job creation.
+        </p>
+
+        <button class="read-more">READ MORE</button>
+
+        <div class="card-more">
+          <ul>
+            <li>Tax increment financing (TIF)</li>
+            <li>Workforce development grants</li>
+            <li>Small business assistance programs</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="business-card" data-category="construction">
+        <h4>CONSTRUCTION &amp; DEVELOPMENT</h4>
+        <p>
+          New construction and renovations must follow city building codes and review
+          processes.
+        </p>
+
+        <button class="read-more">READ MORE</button>
+
+        <div class="card-more">
+          <ul>
+            <li>Building permit applications</li>
+            <li>Plan reviews and inspections</li>
+            <li>Environmental impact requirements</li>
+            <li>Final occupancy approval</li>
+          </ul>
+        </div>
+      </article>
+
+    </section>
+
+  </section>
+
+</main>
+
+<%- include("partials/footer") %>
+
+<script src="/js/business.js"></script>
+</body>
+</html>
