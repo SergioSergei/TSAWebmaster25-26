@@ -346,8 +346,8 @@ body{
 /* RIGHT stats should be anchored near the RIGHT SIDE, not in flow */
 .statRow--right{
   position: absolute;
-  right: 36px;
-  top: 210px; /* matches screenshot placement */
+  right: 56px;
+  top: 265px; /* matches screenshot placement */
   display:flex;
   gap: 18px;
   justify-content:flex-end;
@@ -363,17 +363,7 @@ body{
 }
 
 /* illustration should sit LEFT and fairly high, not halfway down the page */
-.diversity__art{
-  position: relative;
-  z-index: 2;
-  margin-top: 34px;
-}
-.diversity__art img{
-  width: 640px;       /* big like screenshot */
-  max-width: 100%;
-  display:block;
-  margin-left: 0;
-}
+
 
 /* Big teal circle badge in bottom center */
 .diversity__badge{
@@ -384,7 +374,7 @@ body{
   width: 165px;
   height: 165px;
   border-radius: 999px;
-  background: rgba(111,182,187,1);
+  background: #2ca7ab;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -532,3 +522,77 @@ body{
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+
+
+.statBig{
+  font-size: 22px; 
+}
+
+.statMid{
+  font-size: 18px; 
+}
+
+.statSmall{
+  font-size: 12px; 
+}
+
+
+.statRow + .statRow{
+  margin-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+.diversity__badge{
+  width: 225px; 
+  height: 225px;
+}
+
+.badgeText{
+  font-size: 14px; 
+}
+
+
+
+
+.looking,
+.diversity{
+  position: relative;
+  z-index: 2;
+}
+
+.diversity__art{
+  margin-top: 0px; 
+  z-index: -2;
+
+}
+
+.diversity__art img{
+  width: 500px;
+  position:absolute;
+  top: 100px;
+  left:125px;
+  z-index: -2;
+
+}
+
+
+.squiggle {
+  position: absolute;
+  top: 540px;
+  left: 200;
+  width: 1200px;
+  height: auto;       /* let it grow naturally */
+  z-index: 1;        /* behind everything */
+  pointer-events: none;
+}
+
+
